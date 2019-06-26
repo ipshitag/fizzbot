@@ -3,6 +3,7 @@
 import json
 import urllib.request
 import urllib.error
+import sys
 
 domain = 'https://api.noopschallenge.com'
 
@@ -46,7 +47,7 @@ def get_correct_answer(question_url):
 
         if (response.get('result') == 'interview complete'):
             print('congratulations!')
-            exit()
+            sys.exit(0)
 
         if (response.get('result') == 'correct'):
             input('press enter to continue')
